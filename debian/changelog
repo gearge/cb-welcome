@@ -1,0 +1,19 @@
+cb-welcome (0.03) unstable; urgency=low
+
+  * devel-install-version-control-tools:
+    - add git-gui git-svn git-cvs git-email thunar-vcs-plugin
+
+ -- Philip Newborough <corenominal@corenominal.org>  Fri, 20 Apr 2012 09:30:51 +0100
+
+cb-welcome (0.02) unstable; urgency=low
+
+  * Only run if member of sudo group.
+  * devel-install-packaging-tools: s/diff/diffutils/
+
+ -- Philip Newborough <corenominal@corenominal.org>  Mon, 16 Apr 2012 11:28:48 +0100
+
+cb-welcome (0.01) unstable; urgency=low
+
+  * Initial release.
+
+ -- Philip Newborough <corenominal@corenominal.org>  Mon, 16 Apr 2012 11:28:48 +0100

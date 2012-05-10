@@ -1,0 +1,14 @@
+Source: cb-welcome
+Section: misc
+Priority: extra
+Maintainer: Philip Newborough <corenominal@corenominal.org>
+Build-Depends: debhelper (>= 5.0.0)
+Standards-Version: 3.9.1
+Homepage: http://crunchbang.org/
+
+Package: cb-welcome
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, terminator
+Description: CrunchBang welcome script.
+ Optional post installation script for CrunchBang Linux.
+ .
