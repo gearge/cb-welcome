@@ -2,12 +2,13 @@ clear
 echo "  Checking internet connection..."
 sleep 2s
 echo ""
-IS=`/bin/ping -c 1 ftp.debian.org | grep -c "64 bytes"`
-if [ "$IS" -lt "1" ]; then
+# Check the connection to ftp.debian.org by downloading a file from it. No disk space used.
+if ! wget -O - http://ftp.debian.org/debian/README &> /dev/null
+then
     until [ "$CONT" != "" ]; do
         echo ""
-        IS=`/bin/ping -c 1 ftp.debian.org | grep -c "64 bytes"`
-        if [ "$IS" -lt "1" ]; then
+        if ! wget -O - http://ftp.debian.org/debian/README &> /dev/null
+        then
             clear
             echo "  Failed to connect to package repository!"
             echo ""
