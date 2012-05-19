@@ -1,3 +1,14 @@
+cb-welcome (0.04) unstable; urgency=low
+
+  * Modified 'check-internet-connection' script to use the reliable wget method instead of unreliable ping
+
+ -- Giorgi Tavkelishvili <gtavkelishvili@linuxpg.org> Thu, 10 May 2012 23:03:09 +0400
+
+  * Modified 'cb-welcome' script to use 'connectiontest' function from /usr/bin/cb-include.cfg
+  * Removed obsolete 'check-internet-connection' script
+
+ -- Giorgi Tavkelishvili <gtavkelishvili@linuxpg.org> Sat, 19 May 2012 19:09:04 +0400
+
 cb-welcome (0.03) unstable; urgency=low
 
   * devel-install-version-control-tools:

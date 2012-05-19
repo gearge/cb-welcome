@@ -49,15 +49,20 @@ fi
 LIBDIR="/usr/lib/lib-cb-welcome"
 STEP="0"
 STEPS=`ls -1 $LIBDIR | wc -l`
-#Internet connection not counted as step, so -1
-STEPS=$((STEPS-1))
-
+# Importing variables and functions from cb-include.cfg
+if [[ -f /usr/bin/cb-include.cfg ]]
+then
+    source "/usr/bin/cb-include.cfg"
+else
+    echo "Error: Failed to locate cb-include.cfg"
+    exit 1
+fi
 
 # Run through steps
 STEP=$((STEP+1))
 . $LIBDIR/intro
 
-. $LIBDIR/check-internet-connection
+connectiontest
 
 STEP=$((STEP+1))
 . $LIBDIR/apt-update
